@@ -46,7 +46,7 @@ app.use(express.json()); // parse incoming JSON
 // Routers
 import VehiclesRoutes from './Routes/vehicles.js';
 import BookingRoutes from './Routes/booking.js';
-import CustomerRoutes from './Routes/customer.js';
+
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI, {
@@ -65,7 +65,7 @@ app.use(cors({
 // API Routes
 app.use('/api', VehiclesRoutes);
 app.use('/api', BookingRoutes);
-app.use('/api', CustomerRoutes);
+
 
 // Server listen
 const port = process.env.PORT || 5000;

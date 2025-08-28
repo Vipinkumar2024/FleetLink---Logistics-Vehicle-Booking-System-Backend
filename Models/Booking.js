@@ -6,11 +6,7 @@ const BookingSchema=new mongoose.Schema({
   toPincode: { type: String, required: true },
   startTime: { type: Date, required: true },
   endTime: { type: Date, required: true },
- customerId: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Customer",
-      required: true,
-    },
+    customerId: { type: String, required: true }
 })
 
 export const Booking=mongoose.model("Booking",BookingSchema)
